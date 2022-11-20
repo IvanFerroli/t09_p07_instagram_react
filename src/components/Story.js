@@ -1,12 +1,10 @@
-export default function Story() {
-    return(
-        <div class="story">
-            <div class="imagem">
-              <img src="./assets/img/9gag.svg" />
-            </div>
-            <div class="usuario">
-              9gag
-            </div>
-          </div>
-    )
+export default function Story(props) {
+	return (
+		<div className="story">
+			<div className="imagem">
+				<img alt={props.nome} src={props.imagem} />
+			</div>
+			<div className="usuario">{props.nome}</div>
+		</div>
+	);
 }

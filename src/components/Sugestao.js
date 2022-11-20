@@ -1,17 +1,15 @@
-export default function Sugestao() {
-    return(
-        <>
-            <div class="sugestao">
-            <div class="usuario">
-              <img src="./assets/img/bad.vibes.memes.svg" />
-              <div class="texto">
-                <div class="nome">bad.vibes.memes</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
+export default function Sugestao(props) {
+	return (
+		<div className="sugestao">
+			<div className="usuario">
+				<img alt={props.nome} src={props.imagem} />
+				<div className="texto">
+					<div className="nome">{props.nome}</div>
+					<div className="razao">{props.status}</div>
+				</div>
+			</div>
 
-            <div class="seguir">Seguir</div>
-          </div>
-        </>
-    )
+			<div className="seguir">{props.acao}</div>
+		</div>
+	);
 }
