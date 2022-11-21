@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Usuario() {
+export default function Usuario(props) {
 	const [nome, setNome] = React.useState("CatanaComics");
 	const [imagem, setImagem] = React.useState("./assets/img/catanacomics.svg");
 
@@ -8,7 +8,7 @@ export default function Usuario() {
 		const nomeLindo = prompt("Para qual nome deseja alterar?");
 		if (nomeLindo === "" || nomeLindo === null) {
 			trocaNome();
-			return "Nome inválido"
+			return props.nome
 		} else {
 			return nomeLindo;
 		}
