@@ -6,7 +6,7 @@ export default function Usuario() {
 
 	function trocaNome() {
 		const nomeLindo = prompt("Para qual nome deseja alterar?")
-		if(nomeLindo === ""){
+		if(nomeLindo === "" || nomeLindo === null){
 			trocaNome()
 		}
 		return nomeLindo
@@ -14,8 +14,8 @@ export default function Usuario() {
 
 	function trocaImagem() {
 		const imagemLinda = prompt("Para qual imagem deseja alterar?")
-		if(imagemLinda === ""){
-			trocaNome()
+		if(imagemLinda === "" || imagemLinda === null){
+			trocaImagem()
 		}
 		return imagemLinda
 	}
