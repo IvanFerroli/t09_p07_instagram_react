@@ -9,7 +9,7 @@ export default function Posts() {
 			post_imagem: "./assets/img/gato-telefone.svg",
 			curtida_imagem: "./assets/img/respondeai.svg",
 			curtida_nome: "respondeai",
-			curtida_qtd: "101.523",
+			curtida_qtd: 101523,
 			liked: false,
 		},
 		{
@@ -19,7 +19,7 @@ export default function Posts() {
 			post_imagem: "./assets/img/dog.svg",
 			curtida_imagem: "./assets/img/adorable_animals.svg",
 			curtida_nome: "adorable_animals",
-			curtida_qtd: "301.523",
+			curtida_qtd: 301523,
 			liked: false,
 		},
 		{
@@ -29,7 +29,7 @@ export default function Posts() {
 			post_imagem: "./assets/img/gato-telefone.svg",
 			curtida_imagem: "./assets/img/respondeai.svg",
 			curtida_nome: "respondeai",
-			curtida_qtd: "999.523",
+			curtida_qtd: 999523,
 			liked: false,
 		},
 		{
@@ -39,7 +39,7 @@ export default function Posts() {
 			post_imagem: "./assets/img/dog.svg",
 			curtida_imagem: "./assets/img/adorable_animals.svg",
 			curtida_nome: "adorable_animals",
-			curtida_qtd: "109.529",
+			curtida_qtd: 109529,
 			liked: false,
 			saved: false
 		},

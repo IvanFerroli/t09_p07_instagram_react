@@ -15,7 +15,7 @@ export default function Post(props) {
 
 	console.log(props);
 	return (
-		<div className="post">
+		<div className="post" data-test="post">
 			<div className="topo">
 				<div className="usuario">
 					<img alt={props.autor_nome} src={props.autor_imagem} />
@@ -31,6 +31,7 @@ export default function Post(props) {
 					alt={props.autor_nome}
 					src={props.post_imagem}
 					onClick={() => setIsliked(true)}
+					data-test="post-image"
 				/>
 			</div>
 
@@ -42,11 +43,13 @@ export default function Post(props) {
 								name="heart"
 								class="liked"
 								onClick={likePost}
+								data-test="like-post"
 							></ion-icon>
 						) : (
 							<ion-icon
 								name="heart-outline"
 								onClick={likePost}
+								data-test="like-post"
 							></ion-icon>
 						)}
 						<ion-icon name="chatbubble-outline"></ion-icon>
@@ -57,11 +60,13 @@ export default function Post(props) {
 							<ion-icon
 								name="bookmark"
 								onClick={savePost}
+								data-test="save-post"
 							></ion-icon>
 						) : (
 							<ion-icon
 								name="bookmark-outline"
 								onClick={savePost}
+								data-test="save-post"
 							></ion-icon>
 						)}
 					</div>
@@ -71,7 +76,7 @@ export default function Post(props) {
 					<img alt={props.curtida_nome} src={props.curtida_imagem} />
 					<div className="texto">
 						Curtido por <strong>{props.curtida_nome}</strong> e{" "}
-						<strong>outras {props.curtida_qtd} pessoas</strong>
+						<strong data-test="likes-number">outras {isLiked ? (props.curtida_qtd + 1) : props.curtida_qtd} pessoas</strong>
 					</div>
 				</div>
 			</div>
