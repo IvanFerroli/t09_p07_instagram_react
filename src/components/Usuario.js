@@ -5,11 +5,10 @@ export default function Usuario() {
 	const [imagem, setImagem] = React.useState("./assets/img/catanacomics.svg");
 
 	function trocaNome() {
-		const promptNome = prompt("Para qual nome deseja alterar?");
-		if (promptNome === "" || promptNome === null) {
+		const nomeLindo = prompt("Para qual nome deseja alterar?");
+		if (nomeLindo === "" || nomeLindo === null) {
 			trocaNome();
 		} else {
-			const nomeLindo = promptNome
 			return nomeLindo;
 		}
 	}
