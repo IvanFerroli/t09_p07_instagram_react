@@ -41,6 +41,7 @@ export default function Posts() {
 			curtida_nome: "adorable_animals",
 			curtida_qtd: "109.529",
 			liked: false,
+			saved: false
 		},
 	];
 

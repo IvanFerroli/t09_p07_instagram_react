@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
 
 export default function Post(props) {
 	const [isLiked, setIsliked] = React.useState(props.liked);
 
-  function likePost() {
-    setIsliked(!isLiked);
-  }
+	function likePost() {
+		setIsliked(!isLiked);
+	}
+
+	const [isSaved, setIsSaved] = React.useState(props.saved);
+
+	function savePost() {
+		setIsSaved(!isSaved);
+	}
 
 	console.log(props);
 	return (
@@ -21,28 +27,43 @@ export default function Post(props) {
 			</div>
 
 			<div className="conteudo">
-			
-          <img alt={props.autor_nome} src={props.post_imagem} onClick={() => setIsliked(true)} />
-        
+				<img
+					alt={props.autor_nome}
+					src={props.post_imagem}
+					onClick={() => setIsliked(true)}
+				/>
 			</div>
 
 			<div className="fundo">
 				<div className="acoes">
 					<div>
-					{isLiked ? (
-              <ion-icon
-                name="heart"
-                class="liked"
-                onClick={likePost}
-              ></ion-icon>
-            ) : (
-              <ion-icon name="heart-outline" onClick={likePost}></ion-icon>
-            )}	
+						{isLiked ? (
+							<ion-icon
+								name="heart"
+								class="liked"
+								onClick={likePost}
+							></ion-icon>
+						) : (
+							<ion-icon
+								name="heart-outline"
+								onClick={likePost}
+							></ion-icon>
+						)}
 						<ion-icon name="chatbubble-outline"></ion-icon>
 						<ion-icon name="paper-plane-outline"></ion-icon>
 					</div>
 					<div>
-						<ion-icon name="bookmark-outline"></ion-icon>
+						{isSaved ? (
+							<ion-icon
+								name="bookmark"
+								onClick={savePost}
+							></ion-icon>
+						) : (
+							<ion-icon
+								name="bookmark-outline"
+								onClick={savePost}
+							></ion-icon>
+						)}
 					</div>
 				</div>
 
