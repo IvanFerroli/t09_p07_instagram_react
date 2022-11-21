@@ -6,10 +6,10 @@ export default function Usuario() {
 
 	function trocaNome() {
 		const nomeLindo = prompt("Para qual nome deseja alterar?");
-		if (nomeLindo == "" || nomeLindo == null) {
-			trocaNome();
-		} else {
+		if (nomeLindo) {
 			return nomeLindo;
+		} else {
+			trocaNome();
 		}
 	}
 
